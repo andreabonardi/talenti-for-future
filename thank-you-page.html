@@ -1,0 +1,623 @@
+<html class="theme-2">
+
+<head>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <!-- Ajax-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="stile/bootstrap.min.css">
+
+    <!-- Boostrap JS-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="stile/mdb.min.css">
+
+    <!-- Cookies-->
+    <!--script src="js/Personalizzati/cookie.js"></script-->
+
+    <!-- Scroll trigger-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+    <!-- Carosello-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="stile/carousel/animate.css">
+    <link rel="stylesheet" href="stile/carousel/style.css">
+    <link rel="stylesheet" href="stile/carousel/media-queries.css">
+    <link rel="stylesheet" href="stile/carousel/carousel.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+
+    <!-- Stile personale -->
+    <link rel="stylesheet" href="stile/style.css">
+    <link rel="stylesheet" href="stile/stile-2.css" type="text/css">
+
+    <!-- Ruota parole-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+    <script src="https://codepen.io/grayghostvisuals/pen/a08e0d79c150ff5030f9b6afaa137749.js"></script>
+
+    <!-- Animate style-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Counter-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- Recognize Mobile Devices-->
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+
+    <!--Title-->
+    <title>Messaggio Inviato! - Bonardi Andrea</title>
+
+    <!--Favicon-->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+
+    <!-- Mobile-->
+    <!--Favicon Smarthone-->
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <!--Title for sharing-->
+    <meta name="apple-mobile-web-app-title" content="Andrea Bonardi ">
+
+</head>
+<script>
+    // function to set a given theme/color-scheme
+    function setTheme(themeName) {
+        localStorage.setItem('theme', themeName);
+        document.documentElement.className = themeName;
+    }
+
+    // function to toggle between light and dark theme
+    function toggleTheme() {
+        if (localStorage.getItem('theme') === 'theme-1') {
+            setTheme('theme-2');
+        } else {
+            setTheme('theme-1');
+        }
+    }
+
+    // Immediately invoked function to set the theme on initial load
+    (function() {
+        if (localStorage.getItem('theme') === 'theme-1') {
+            setTheme('theme-1');
+            document.getElementById('slider').checked = false;
+        } else {
+            setTheme('theme-2');
+            document.getElementById('slider').checked = true;
+        }
+    })();
+</script>
+
+<body style="background-color: var(--secondaryColor);">
+
+    <!-- Lateral header menu-->
+    <nav role="navigation">
+        <!-- cambio colore-->
+
+        <div class="themecolors">
+            <label id="switch" class="switch">
+                <input type="checkbox" onchange="toggleTheme()" id="slider">
+                <span class="slider round"></span>
+            </label>
+            <!-- <button id="switch" onclick="toggleTheme()">Switch</button> -->
+        </div>
+
+        <!-- end-->
+        <div id="menuToggle">
+
+            <!-- Barra laterale fissa-->
+            <div class="menu-closed-container">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" title="Andrea Bonardi">Andrea <br> Bonardi</a>
+                </div>
+                <!-- END logo-->
+
+
+
+                <!-- Burger menu -->
+                <div class="burger-container">
+                    <input class="burger" type="checkbox" />
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+                <!-- END burger menu-->
+
+                <!-- Link image social -->
+                <div class="image-container">
+
+                    <a href="https://www.youtube.com/channel/UCHCH03YyhiSIJcR_6sQnbAg?view_as=subscriber" target="_blank" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <br>
+                    <a href="https://www.instagram.com/andreaabonardi/" target="_blank" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <br>
+                    <a href="https://www.linkedin.com/in/andrea-bonardi-b86a211a5/" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <!-- END link image social-->
+
+
+            </div>
+            <!-- END barra laterale fissa-->
+
+            <!-- Menu a comparsa-->
+            <div class="voice-menu-container">
+                <ul id="menu">
+                    <a href="index.html" title="Home">
+                        <li>Home</li>
+                    </a>
+                    <a href="about.html" title="About">
+                        <li>About</li>
+                    </a>
+                    <a href="videogames.html" title="VideoGames">
+                        <li>Videogames</li>
+                    </a>
+                    <a href="football.html" title="Football">
+                        <li>Football</li>
+                    </a>
+                    <a href="contacts.html" title="Contatti">
+                        <li>Contatti</li>
+                    </a>
+                </ul>
+            </div>
+
+
+            <!-- END menu a comparsa-->
+        </div>
+    </nav>
+    <!-- Scroll to top-->
+    <div>
+        <a href="#" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+    </div>
+
+
+    <div class="overlay" style="position: fixed; width: 215vh; height: 110vh; background: #0A0903; opacity: 0.8; z-index: 2;"></div>
+    <div class="overlay2" style="position: fixed; width: 215vh; height: 110vh; background: #0A0903; opacity: 0.8; z-index: 2; cursor: pointer;"></div>
+    <!-- End lateral header menu-->
+
+
+
+    <!-- Fixed Menu Resposnive-->
+    <header>
+        <div class="head_container">
+            <div class="logo2">
+                <a href="index.html" title="Andrea Bonardi">Andrea <br> Bonardi</a>
+            </div>
+            <label id="switch" class="switch">
+                <input type="checkbox" onchange="toggleTheme()" id="slider">
+                <span class="slider round"></span>
+            </label>
+            <div class="menu" id="myTopnav">
+                <ul>
+                    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="openNav()">&#9776;</a>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Request Quote</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="videogames.html">Videogames</a>
+        <a href="football.html">Football</a>
+        <a href="contacts.html">Contatti</a>
+
+
+        <a href="https://www.youtube.com/channel/UCHCH03YyhiSIJcR_6sQnbAg?view_as=subscriber" target="_blank" title="YouTube" style="display: inline-block; margin-right: 0px;">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+        <a href="https://www.instagram.com/andreaabonardi/" target="_blank" title="Instagram" style="display: inline-block;">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/andrea-bonardi-b86a211a5/" target="_blank" title="LinkedIn" style="display: inline-block;">
+            <i class="fab fa-linkedin"></i>
+        </a>
+
+    </div>
+
+    <!-- End fixed menu responsive-->
+
+    <!-- END MENU-->
+
+    <!--  CORPO PAGINA-->
+    <div class="total-container">
+
+
+        <!-- ruota parole-->
+        <svg class="ruotasvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 400 400">
+            <defs>
+              <!-- The text path: see links above regarding coordinate system -->
+              <path d="M0, 200a200, 200 0 1, 0 400, 0a200, 200 0 1, 0 -400, 0" id="txt-path" data-svg-origin="200 200" style="transform: matrix3d(-0.24869, 0.968583, 0, 0, -0.968583, -0.24869, 0, 0, 0, 0, 1, 0, 443.455, 56.0213, 0, 1); transform-origin: 0px 0px 0px;"></path>
+            </defs>
+
+            <text>
+              <!-- This is the magic -->
+              <textPath startOffset="0" xlink:href="#txt-path" data-svg-origin="200.046875 200.015625" style="transform: matrix3d(-0.24869, 0.968583, 0, 0, -0.968583, -0.24869, 0, 0, 0, 0, 1, 0, 443.528, 55.9955, 0, 1); transform-origin: 0px 0px 0px;">Web Designer - Software Developer - Footballer - Video Game Player</textPath>
+            </text>
+        </svg>
+
+        <script>
+            function curvedText(time) {
+                var tl = new TimelineMax({
+                    repeat: -1
+                });
+                var text = document.querySelector('svg textpath'),
+                    path = document.querySelector('svg defs path');
+
+                var from = {
+                    transformOrigin: 'center center',
+                    rotation: 0
+                };
+
+                var to = {
+                    rotation: 360,
+                    ease: Linear.easeInOut
+                };
+
+                tl.fromTo([text, path], time, from, to);
+
+                return tl;
+            }
+
+            curvedText(20);
+        </script>
+
+
+        <!-- end-->
+
+
+        <!-- primo blocco -->
+        <div style="background-color: var(--secondaryColor);">
+
+            <!-- TITOLO-->
+            <div class="title row row-setting">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <strong style="font-size: 3rem;">Grazie!</strong>
+
+                    </p>
+                    <p style="font-size: 1.3rem; color: var(--color1);">
+                        <strong>Il tuo messaggio &egrave; stato inviato con successo! <i class="fas fa-check" style="color: #24B663; font-size: 1.6rem; "></i></strong><br> <br> Riceverai un email all'indiirzzo di posta inserito nel form con il rieplilogo
+                        della tua richiesta.
+                        <br> <br> Verrai ricontattato il prima possibile! <br> </br>
+
+                        Nel frattempo, puoi <span>scaricare il mio CV</span>, oppure continuare a navigare sul sito. <br><br>
+                        <button class="torna-home" onclick="location.href = 'index.html';"> <i class="fas fa-home"></i>Torna alla Home</button>
+                        <a href="component/CV-Bonardi-Andrea.pdf" download target="_blank"><button class="download-cv"> <i class="fa fa-download"></i> Scarica il mio CV</button></a>
+                    </p>
+                </div>
+
+
+                <style>
+                    .torna-home:hover {
+                        outline: none;
+                        color: var(--primaryColor);
+                        background-color: var(--secondaryColor);
+                        border: 1px solid var(--primaryColor);
+                    }
+                    
+                    .torna-home {
+                        color: var(--secondaryColor);
+                        background-color: var(--primaryColor);
+                        border: 1px solid var(--primaryColor);
+                        outline: none;
+                        padding: 10px;
+                        transform: skewX(-10deg);
+                        text-transform: uppercase;
+                    }
+                    
+                    .row-setting {
+                        width: 100%;
+                        margin-left: 0px;
+                    }
+                    
+                    .download-cv {
+                        color: var(--secondaryColor);
+                        background-color: var(--primaryColor);
+                        border: 1px solid var(--primaryColor);
+                        outline: none;
+                        padding: 10px;
+                        transform: skewX(-10deg);
+                        text-transform: uppercase;
+                    }
+                    
+                    .download-cv:hover {
+                        outline: none;
+                        color: var(--primaryColor);
+                        background-color: var(--secondaryColor);
+                        border: 1px solid var(--primaryColor);
+                    }
+                    
+                    .torna-home i,
+                    .download-cv i {
+                        margin-right: 10px;
+                    }
+                    
+                    button:focus {
+                        outline: none;
+                    }
+                    
+                    @media screen and (max-width: 668px) {
+                        .download-cv {
+                            width: 100%;
+                            margin-top: 20px;
+                        }
+                        .torna-home {
+                            width: 100%;
+                        }
+                    }
+                </style>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- SCRIPT-->
+        <script>
+            /*Script per mostrare il menu quando si clicca sul burger menu e nasconderlo quando si clicca sulla X*/
+
+            $(".voice-menu-container").hide();
+            $(".burger").click(function() {
+                $(".voice-menu-container").toggle();
+                $(".carousel-control-prev").toggle();
+                $(".overlay").toggle();
+            });
+            $(".overlay").hide();
+            $(".overlay").click(function() {
+                /*$(".voice-menu-container").hide();
+                $(".carousel-control-prev").show();*/
+                $(".burger").click();
+                $(".overlay").hide();
+            });
+            /*END*/
+
+
+            //Gestione menu mobile
+            $(window).resize(function() {
+                if ($(window).width() < 992) {
+                    if ($('.voice-menu-container').css('display') != 'none') {
+                        $(".burger").click();
+                        $(".overlay").hide();
+                    }
+
+                }
+                if ($(window).width() > 992) {
+                    if ($('.sidenav').css('width') != '0px') {
+                        $(".closebtn").click();
+                        $(".overlay2").hide();
+                    }
+                    if ($('#menuToggle input').is(':checked')) {
+                        $(".burger").click();
+                    }
+                }
+            });
+            $(".overlay2").hide();
+            $(".icon").click(function() {
+                $(".overlay2").show();
+            });
+            $(".closebtn").click(function() {
+                $(".overlay2").hide();
+            });
+            $(".overlay2").click(function() {
+                $(".overlay2").hide();
+                $(".closebtn").click();
+            });
+            //end
+
+            //open close respnsive header
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                //document.getElementById("header").style.marginLeft = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                //document.getElementById("header").style.marginLeft= "0";
+            };
+
+            // ===== Scroll to Top ==== 
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 50) { // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(300); // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(300); // Else fade out the arrow
+                }
+            });
+            /*END*/
+        </script>
+
+
+
+
+
+    </div>
+
+    <!-- END CORPO PAGINA-->
+
+    <!-- FOOTER-->
+
+    <!-- Footer -->
+    <footer class="page-footer font-small indigo ">
+
+        <div class="container text-center text-md-left ">
+
+            <!-- Grid row -->
+            <div class="row ">
+
+                <!--About me-->
+                <div class="col-md-3 mx-auto ">
+                    <div class="footer-about-me-div ">
+                        <img src="images/me.png " alt=" ">
+                        <br>
+                        <span>Andrea Bonardi</span>
+                        <br>
+                        <span>Web designer and Software Developer</span><br><br>
+
+                    </div>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none ">
+
+                <!-- Grid column -->
+                <div class="col-md-3 mx-auto ">
+
+                    <!-- Naviga nel sito -->
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer-title ">Naviga nel sito</h5>
+
+                    <ul class="list-unstyled ">
+                        <li>
+                            <a href="index.html " title="Home ">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html " title="About "> About</a>
+                        </li>
+                        <li>
+                            <a href="videogames.html " title="VideoGames ">Videogames</a>
+                        </li>
+                        <li>
+                            <a href="football.html " title="Football ">Football</a>
+                        </li>
+                        <li>
+                            <a href="contacts.html " title="Contatti ">Contatti</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none ">
+
+                <!-- Grid column -->
+                <div class="col-md-3 mx-auto ">
+
+                    <!-- Contattami -->
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer-title ">Contattami</h5>
+
+                    <ul class="list-unstyled ">
+
+                        <form class="input-group" action="mail.php" method="post">
+                            <div class="row">
+                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 div-form">
+                                    <input type="text" name="first_name" class="form-control form-control-sm input-footer" placeholder="Nome e Cognome" aria-label="Your email" aria-describedby="basic-addon2" name="first_name" required>
+                                </div>
+                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 div-form">
+                                    <input type="email" name="email" class="form-control form-control-sm input-footer" placeholder="Indirizzo e-mail" aria-label="Your email" aria-describedby="basic-addon2" name="email" required>
+                                </div>
+                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 div-form">
+                                    <input name="message" type="text" class="form-control form-control-sm input-footer" placeholder="Richiesta" aria-label="Your email" aria-describedby="basic-addon2" name="message" required>
+                                </div>
+                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 div-form">
+                                    <div class="input-group-append">
+                                        <input class="btn btn-sm btn-outline-white my-0 invia-footer" type="submit" name="submit" value="Invia">
+                                    </div>
+                                </div>
+                        </form>
+
+
+
+                    </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none ">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto ">
+
+                        <!-- Link utili -->
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer-title ">Link utili</h5>
+
+                        <ul class="list-unstyled " style=" text-align:left !important; ">
+                            <li class=" social-1 ">
+                                <span style="display: inline; "><a href="mailto:info.bonardiandrea@gmail.com " title="Inviami una mail " >  <i class="fa fa-envelope " style="padding-right: 0.5rem !important; "></i>Inviami una mail</a></span>
+                            </li>
+                            <li class="footer-social-li social-2 ">
+                                <a href="https://www.youtube.com/channel/UCHCH03YyhiSIJcR_6sQnbAg?view_as=subscriber " target="_blank " title="YouTube ">
+                                    <i class="fab fa-youtube " style="font-size: 33px;height: 33px;margin-bottom: 1vh; color: white; "></i>
+                                    <span> Seguimi su YouTube</span>
+                                </a>
+                            </li>
+                            <li class="footer-social-li social-3 ">
+                                <a href="https://www.instagram.com/andreaabonardi/ " target="_blank " title="Instagram ">
+                                    <i class="fab fa-instagram " style="font-size: 42px;height: 33px;margin-bottom: 1vh; color: white; "></i>
+                                    <span> Seguimi su Instagram</span>
+                                </a>
+                            </li>
+                            <li class="footer-social-li social-4 ">
+                                <a href="https://www.linkedin.com/in/andrea-bonardi-b86a211a5/ " target="_blank " title="LinkedIn ">
+                                    <i class="fab fa-linkedin " style="font-size: 40px;height: 33px;margin-bottom: 1vh; margin-left: 2px; color: white; "></i>
+                                    <span> Seguimi su LinkedIn</span>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </div>
+            <!-- Footer Links -->
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3 copyright ">&copy; Copyright 2021 - Bonardi Andrea
+            </div>
+            <!-- Copyright -->
+
+    </footer>
+    <!--End footer -->
+    </div>
+
+    <!-- Carosello-->
+    <script src="assets/js/jquery-3.3.1.min.js "></script>
+    <script src="assets/js/jquery-migrate-3.0.0.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js " integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js " integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k " crossorigin="anonymous "></script>
+    <script src="js/carousel/jquery.backstretch.min.js "></script>
+    <script src="js/carousel/wow.min.js "></script>
+    <script src="js/carousel/scripts.js "></script>
+
+
+</body>
+
+</html>

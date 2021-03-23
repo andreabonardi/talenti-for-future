@@ -1,0 +1,722 @@
+<html class="theme-2">
+
+<head>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Ajax-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="stile/bootstrap.min.css">
+
+    <!-- Boostrap JS-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="stile/mdb.min.css">
+
+    <!-- Cookies-->
+    <!--script src="js/Personalizzati/cookie.js"></script-->
+
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+
+
+
+    <!-- Stile personale -->
+    <link rel="stylesheet" href="stile/stile-2.css" type="text/css">
+
+
+
+
+    <!-- Animate style-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Recognize Mobile Devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+
+
+    <!-- Mobile-->
+    <!--Favicon Smartphone-->
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <!--Title for sharing-->
+    <meta name="apple-mobile-web-app-title" content="Talenti For Future">
+
+    <!--Title-->
+    <title>Questionario - Talenti4Future</title>
+
+
+    <meta property="og:title" content="Talenti For Future" />
+    <meta property="og:description" content="l'alternativa che non c'era per formare tecnici ad alta specializzazione." />
+    <meta property="og:image" itemprop="image" content="images/logo-black.png">
+
+
+
+</head>
+
+<body style="background-image: url('images/sfondo-2.jpg'); background-repeat: no-repeat; background-size: cover; ">
+
+
+
+
+    <!-- End return to top-->
+
+    <!--PER HEADER IMPORTO DA QUI-->
+    <script>
+        //Gestione apertura menu mobile
+
+        $(window).resize(function() {
+            $(window).scroll(function() {
+                if ($(window).width() > 992) {
+                    var sc = $(window).scrollTop()
+                    if (sc > 100) {
+                        $(".orari-header ").slideUp();
+                        $("nav ").addClass("header-position ");
+                    } else {
+                        $(".orari-header ").slideDown();
+                        $("nav ").removeClass("header-position ");
+                    }
+                }
+            });
+        });
+
+        // ===== Scroll to Top ==== 
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 50) { // If page is scrolled more than 50px
+                $('#return-to-top').fadeIn(300); // Fade in the arrow
+            } else {
+                $('#return-to-top').fadeOut(300); // Else fade out the arrow
+            }
+        });
+    </script>
+    <!--Class active header-->
+
+
+
+
+    <!-- All page container (corpo pagina)-->
+    <div class="container form-cont" style="width: 65%; background-color: var(--colorbg); ">
+        <div class="row" style="margin-bottom: 1vh; padding-top: 5vh; text-align: center;">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 logo-q-cont">
+                <img src="images/logo-black.png" alt="" style="width: 20%;" class="logo-q-img">
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12" style="font-size: 2rem; font-weight: bold; color: var(--textColor3);">
+                Questionario del talento
+            </div>
+
+
+        </div>
+        <!-- CORPRO PAGINA-->
+
+        <div class="row" style="margin-bottom: 5vh;">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 intro" style="font-size: 1.5rem;">
+                <strong><span style="font-weight: bold;">Benvenuto!</span> Grazie a questo semplice questionario, ti daremo un primo feedback sui pre-requisiti minimi richiesti e sul corso per il quale pensiamo che tu sia pi&ugrave; portato.</strong>
+            </div>
+        </div>
+
+        <ul class="progress-indicator" style="margin-bottom: 5vh;">
+            <li class="completed"><span class="bubble"></span> Informazioni personali </li>
+            <li> <span class="bubble"></span> Marketing </li>
+            <li> <span class="bubble"></span> Social Media. </li>
+            <li> <span class="bubble"></span> E-commerce </li>
+            <li> <span class="bubble"></span> HR. </li>
+        </ul>
+
+
+
+        <form>
+            <!--Personali-->
+            <div class="personali" style="padding-bottom: 10%;">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <h1 style="font-weight: bold; ">Informazioni Personali</h1>
+                        <p style="font-size: 1.5rem;"><span style="font-weight: bold;">Conosciamoci!</span> Per prima cosa, ti chiediamo di inserire alcuni tuoi dati personali, per poterti poi ricontatatre.</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Nome e Cognome</label>
+                    <input type="text" class="form-control" id="name" placeholder="Nome e Cognome" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Et&agrave;</label>
+                    <select class="form-control" id="exampleFormControlSelect1" required>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>  
+                <option>12</option> 
+                <option>13</option>  
+                <option>14</option>  
+                <option>15</option> 
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+                <option>25 +</option>
+              </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Indirizzo E-mail</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Indirizzo e-mail" required>
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Numero di telefono</label>
+                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Numero di Telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Percorso Scolastico</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Percorso Scolastico" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Livello di lingua Inglese</label>
+                    <select class="form-control" id="exampleFormControlSelect1" required>
+                <option>A1</option>
+                <option>A2</option>
+                <option>B1</option>
+                <option>B2</option>
+                <option>C1</option>
+                <option>C2</option>
+              </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Esperienza lavorativa</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Esperienza Lavorativa" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Hobby ed Interessi</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Hobby ed Interessi" required>
+                </div>
+                <div class="form-check" style="display: inline-block;">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                  Disoccupato
+                </label>
+                </div>
+                <div class="form-check" style="display: inline-block;">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                  Occupato
+                </label>
+                </div>
+                <div class="form-check" style="display: inline-block;">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                  Studente
+                </label>
+                </div>
+                <div style="text-align: center; margin-top: 5vh;">
+                    <a class="btn-pers button-ques" style="width: 50%; text-align: center;">&nbsp;Avanti&nbsp;</a>
+                </div>
+            </div>
+            <!--End-->
+            <!--Domande Digital Marketing-->
+            <div class="marketing" style="display: none; padding-bottom: 9%;">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <p style="font-size: 1.5rem;"><span style="font-weight: bold;">Ben fatto!</span> Ora, passiamo alle domande sui corsi.<br> Rispondi ad ogni domanda trascinando l'indicatore sulla scala che va da 1 a 10.</p>
+                        <h1 style="font-weight: bold; ">Digital Marketing</h1>
+
+                    </div>
+                </div>
+                <!--1-->
+                <label for="customRange3">1. Quanto ti consideri essere una persona orientata agli obiettivi?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--2-->
+                <label for="customRange3">2. Quanto pensi di avere attitudini commerciali, ovvero quanto ti senti portato per le vendite?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--3-->
+                <label for="customRange3">3. Quanto &egrave; importante per te misurare e avere riscontri numerici delle performance?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--4-->
+                <label for="customRange3">4. Quanto ti piace la statistica e i numeri in generale?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--5-->
+                <label for="customRange3">5. Quanto ti senti portato per la produzione di contenuti online?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--6-->
+                <label for="customRange3">6. Quanto persegui con determinazione dei risultati che ti sei prefissato?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--7-->
+                <label for="customRange3">7. Quanto ti piace scrivere?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--8-->
+                <label for="customRange3">8. Quanto ti piace spaziare in pi&ugrave; ambiti senza doverti verticalizzare in uno solo di questi?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--9-->
+                <label for="customRange3">9. Precisione e accuratezza: quanto si avvicinano al tuo modo di essere queste due parole?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--10-->
+                <label for="customRange3">10. Quanto sei disposto ad una formazione continua per rimanere al passo con le nuove tecnologie?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--11-->
+                <label for="customRange3">11. Quanto ti ritieni un problem solver, ovvero una persona capace di intuire soluzioni ed applicarle?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <div style="text-align: center; margin-top: 5vh; width: 100%;">
+                    <a class="go-back-mark button-ques" style="width: 100%; text-align: center;">Indietro</a>
+                </div>
+                <div style="text-align: center; margin-top: 5vh; width: 100%;">
+                    <a class=" btn-mark button-ques " style="width: 100%; text-align: center;">&nbsp;&nbsp;Avanti&nbsp;&nbsp;</a>
+                </div>
+            </div>
+            <!--END-->
+            <!--Social Media Manager-->
+            <div class="social-media" style="display: none; padding-bottom: 10%;">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <h1 style="font-weight: bold; ">Social Media Manager</h1>
+                    </div>
+                </div>
+                <!--1-->
+                <label for="customRange3">1. Ti senti pi&ugrave; sognatore e visionario o pratico e realista?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--2-->
+                <label for="customRange3">2. A volte senti che la tua fantasia non ha confini e dovresti contenerla?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--3-->
+                <label for="customRange3">3. Quando ti vuoi esprimere, preferisci messaggi brevi e specifici o lunghi e descrittivi?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--4-->
+                <label for="customRange3">4. Quanto tempo trascorri sui Social durante la settimana?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--5-->
+                <label for="customRange3">5. Tra Facebook, LinkedIn, Instagram, ecc... Quanti social utilizzi nell'arco della settimana?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--6-->
+                <label for="customRange3">6. Nello scrivere un testo, &egrave; facile per te trovare le parole giuste?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--7-->
+                <label for="customRange3">7. Quando sei con gli amici, in genere proponi le attivit&agrave; da svolgere o lasci decidere agli altri?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--8-->
+                <label for="customRange3">8. Preferisci cercare nuove emozioni o mantenere sane abitudini?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--9-->
+                <label for="customRange3">9. In una festa ti piace osservare gli altri in serenit&agrave; o intraprendere conversazioni con gli invitati?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--10-->
+                <label for="customRange3">10. Ti piace trovare soluzioni a problemi aziendali o sarebbe meglio che se ne occupasse qualcun altro?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--11-->
+                <label for="customRange3">11. Preferisci dare ordini o riceverne?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--12-->
+                <label for="customRange3">12. Ti riprendi velocemente da un duro colpo o hai bisogno di un po' di tempo per rimetterti in pista?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--13-->
+                <label for="customRange3">13. Quando succede un imprevisto, reagisci pi&ugrave; in modo impulsivo ed emotivo o mantieni la calma?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--14-->
+                <label for="customRange3">14. Preferisci pi&ugrave; guardare un telegiornale in TV o vedere le notizie on line?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <div style="text-align: center;  margin-top: 5vh; width: 100%;">
+                    <a class="go-back-social button-ques" style="width: 50%; text-align: center;">Indietro</a>
+                </div>
+                <div style="text-align: center; margin-top: 5vh; width: 100%;">
+                    <a class="btn-social button-ques" style="width: 50%; text-align: center;">&nbsp;&nbsp;Avanti&nbsp;&nbsp;</a>
+                </div>
+
+            </div>
+
+            <!-- E- COMMERCE SPECIALIST  -->
+            <div class="e-commerce" style="display: none; padding-bottom: 10%;">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <h1 style="font-weight: bold; ">E- COMMERCE SPECIALIST </h1>
+                    </div>
+                </div>
+                <!--1-->
+                <label for="customRange3">1. Quanto &egrave; importante per te raggiungere un obiettivo prefissato?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--2-->
+                <label for="customRange3">2. Quanto ti senti portato per il settore del commercio?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--3-->
+                <label for="customRange3">3. Quanto ti ritieni amante dei numeri e della matematica in generale?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--4-->
+                <label for="customRange3">4. Quanto tieni ad essere preciso quando svolgi un compito?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--5-->
+                <label for="customRange3">5. Quanto ti piace misurare statisticamente gli avvenimenti per avere un raffronto?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--6-->
+                <label for="customRange3">6. Quanto ti ritieni analitico?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--7-->
+                <label for="customRange3">7. Quanto ti piace l'idea di riuscire a valorizzare dei prodotti, attraverso una ottimale attivit&agrave; di marketing, e migliorarne cos&igrave; le vendite? </label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--8-->
+                <label for="customRange3">8. A scuola, quanto amavi le discipline tecniche?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--9-->
+                <label for="customRange3">9. Quanto senti la passione per un preciso settore merceologico (ES moda, food, oggettistica, elettronica ...) in cui vorresti lavorare?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--10-->
+                <label for="customRange3">10. Quanto ti piacerebbe lavorare ai contenuti online di un prodotto (schede informative, foto, immagini e video )? </label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--11-->
+                <label for="customRange3">11. Quanto ti piacerebbe capire come far apparire i tuoi prodotti o servizi nei primi posti delle ricerche su Google?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--Bottone-->
+                <div style="text-align: center;  margin-top: 5vh; width: 100%;">
+                    <a class="go-back-ecomm button-ques" style="width: 50%; text-align: center;">Indietro</a>
+                </div>
+                <div style="text-align: center; margin-top: 5vh; width: 100%;">
+                    <a class="btn-ecomm button-ques" style="width: 50%; text-align: center;">&nbsp;&nbsp;Avanti&nbsp;&nbsp;</a>
+                </div>
+
+            </div>
+
+            <!-- HR  -->
+            <div class="hr" style="display: none; padding-bottom: 10%;">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <h1 style="font-weight: bold; "> HR </h1>
+                    </div>
+                </div>
+                <!--1-->
+                <label for="customRange3">1. Quanto ti ritieni una persona flessibile? </label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--2-->
+                <label for="customRange3">2. Quanto ti ritieni rapido a comprendere gli altri? </label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--3-->
+                <label for="customRange3">3. Quanto sei capace a ordinare le informazioni in modo chiaro ed a estrapolarne contenuti utili?</label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--4-->
+                <label for="customRange3">4. Che capacit&agrave; hai di gestire il tuo tempo e quello degli altri? </label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--5-->
+                <label for="customRange3">5. Che capacit&agrave; hai di negoziare, discutere e trattare? </label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--6-->
+                <label for="customRange3">6. Sai comunicare in modo chiaro e coinvolgente? </label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--7-->
+                <label for="customRange3">7. Sai utilizzare gestionali riguardanti le risorse umane? </label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--8-->
+                <label for="customRange3">8. Sei appassionato di diritto del lavoro e diritto sindacale? </label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--9-->
+                <label for="customRange3">9. Hai interesse a sapere come leggere una busta paga? </label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <!--10-->
+                <label for="customRange3">10. Sei una persona precisa? </label>
+                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" value="0" required>
+                <br>
+                <div style="text-align: center; margin-top: 5vh; width: 100%;">
+                    <a class="button-ques go-back-hr" style="width: 50%; text-align: center;">Indietro</a>
+                </div>
+                <div style="text-align: center; margin-top: 1vh; width: 100%; text-align: center !important;">
+                    <button type="submit" class="button-ques btn-invia-q" style=" text-align: center;">&nbsp;&nbsp;INVIA&nbsp;&nbsp;</button>
+                </div>
+            </div>
+
+        </form>
+
+        <script>
+            //TASTI AVANTI ORA AGGIUNGI/RIMUOV CLASSE COMPLETED
+            $(".btn-pers").click(function() {
+                $(".personali").hide();
+                $(".intro").hide();
+                $(".marketing").show();
+                $(".progress-indicator li:nth-child(2)").addClass("completed");
+                $(window).scrollTop(0);
+            });
+            $(".btn-mark").click(function() {
+                $(".social-media").show();
+                $(".marketing").hide();
+                $(".progress-indicator li:nth-child(3)").addClass("completed");
+                $(window).scrollTop(0);
+            });
+            $(".btn-social").click(function() {
+                $(".social-media").hide();
+                $(".e-commerce").show();
+                $(".progress-indicator li:nth-child(4)").addClass("completed");
+                $(window).scrollTop(0);
+            });
+            $(".btn-ecomm").click(function() {
+                $(".e-commerce").hide();
+                $(".hr").show();
+                $(".progress-indicator li:nth-child(5)").addClass("completed");
+                $(window).scrollTop(0);
+            });
+
+            //TASTI INDIETRO 
+            $(".go-back-mark").click(function() {
+                $(".personali").show();
+                $(".intro").show();
+                $(".marketing").hide();
+                $(".progress-indicator li:nth-child(2)").removeClass("completed");
+                $(window).scrollTop(0);
+            });
+            $(".go-back-social").click(function() {
+                $(".social-media").hide();
+                $(".marketing").show();
+                $(".progress-indicator li:nth-child(3)").removeClass("completed");
+                $(window).scrollTop(0);
+            });
+            $(".go-back-ecomm").click(function() {
+                $(".social-media").show();
+                $(".e-commerce").hide();
+                $(".progress-indicator li:nth-child(4)").removeClass("completed");
+                $(window).scrollTop(0);
+            });
+            $(".go-back-hr").click(function() {
+                $(".e-commerce").show();
+                $(".hr").hide();
+                $(".progress-indicator li:nth-child(5)").removeClass("completed");
+                $(window).scrollTop(0);
+            });
+        </script>
+
+        <!-- END CORPO PAGINA-->
+
+
+</body>
+
+</html>
+
+<style>
+    .flexer,
+    .progress-indicator {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex
+    }
+    
+    .no-flexer,
+    .progress-indicator.stacked {
+        display: block
+    }
+    
+    .no-flexer-element {
+        -ms-flex: 0;
+        -webkit-flex: 0;
+        -moz-flex: 0;
+        flex: 0
+    }
+    
+    .flexer-element,
+    .progress-indicator>li {
+        -ms-flex: 1;
+        -webkit-flex: 1;
+        -moz-flex: 1;
+        flex: 1
+    }
+    
+    .progress-indicator {
+        margin: 0 0 1em;
+        padding: 0;
+        font-size: 80%;
+        text-transform: uppercase
+    }
+    
+    .progress-indicator>li {
+        list-style: none;
+        text-align: center;
+        width: auto;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        text-overflow: ellipsis;
+        color: #bbb;
+        display: block
+    }
+    
+    .progress-indicator>li:hover {
+        color: #6f6f6f
+    }
+    
+    .progress-indicator>li.completed,
+    .progress-indicator>li.completed .bubble {
+        color: var(--textColor3)
+    }
+    
+    .progress-indicator>li .bubble {
+        border-radius: 1000px;
+        width: 20px;
+        height: 20px;
+        background-color: #bbb;
+        display: block;
+        margin: 0 auto .5em;
+        border-bottom: 1px solid #888
+    }
+    
+    .progress-indicator>li .bubble:after,
+    .progress-indicator>li .bubble:before {
+        display: block;
+        position: absolute;
+        top: 9px;
+        width: 100%;
+        height: 3px;
+        content: '';
+        background-color: #bbb
+    }
+    
+    .progress-indicator>li.completed .bubble,
+    .progress-indicator>li.completed .bubble:after,
+    .progress-indicator>li.completed .bubble:before {
+        background-color: var(--textColor3);
+        border-color: var(--textColor3);
+    }
+    
+    .progress-indicator>li .bubble:before {
+        left: 0
+    }
+    
+    .progress-indicator>li .bubble:after {
+        right: 0
+    }
+    
+    .progress-indicator>li:first-child .bubble:after,
+    .progress-indicator>li:first-child .bubble:before {
+        width: 50%;
+        margin-left: 50%
+    }
+    
+    .progress-indicator>li:last-child .bubble:after,
+    .progress-indicator>li:last-child .bubble:before {
+        width: 50%;
+        margin-right: 50%
+    }
+    
+    .progress-indicator>li.active,
+    .progress-indicator>li.active .bubble {
+        color: #337AB7
+    }
+    
+    .progress-indicator>li.active .bubble,
+    .progress-indicator>li.active .bubble:after,
+    .progress-indicator>li.active .bubble:before {
+        background-color: #337AB7;
+        border-color: #122a3f
+    }
+    
+    .progress-indicator>li a:hover .bubble,
+    .progress-indicator>li a:hover .bubble:after,
+    .progress-indicator>li a:hover .bubble:before {
+        background-color: #5671d0;
+        border-color: #1f306e
+    }
+    
+    .progress-indicator>li a:hover .bubble {
+        color: #5671d0
+    }
+    
+    .progress-indicator>li.danger .bubble,
+    .progress-indicator>li.danger .bubble:after,
+    .progress-indicator>li.danger .bubble:before {
+        background-color: #d3140f;
+        border-color: #440605
+    }
+    
+    .progress-indicator>li.danger .bubble {
+        color: #d3140f
+    }
+    
+    .progress-indicator>li.warning .bubble,
+    .progress-indicator>li.warning .bubble:after,
+    .progress-indicator>li.warning .bubble:before {
+        background-color: #edb10a;
+        border-color: #5a4304
+    }
+    
+    .progress-indicator>li.warning .bubble {
+        color: #edb10a
+    }
+    
+    .progress-indicator>li.info .bubble,
+    .progress-indicator>li.info .bubble:after,
+    .progress-indicator>li.info .bubble:before {
+        background-color: #5b32d6;
+        border-color: #25135d
+    }
+    
+    .progress-indicator>li.info .bubble {
+        color: #5b32d6
+    }
+    
+    .progress-indicator.stacked>li {
+        text-indent: -10px;
+        text-align: center;
+        display: block
+    }
+    
+    .progress-indicator.stacked>li .bubble:after,
+    .progress-indicator.stacked>li .bubble:before {
+        left: 50%;
+        margin-left: -1.5px;
+        width: 3px;
+        height: 100%
+    }
+    
+    .progress-indicator.stacked .stacked-text {
+        position: relative;
+        z-index: 10;
+        top: 0;
+        margin-left: 60%!important;
+        width: 45%!important;
+        display: inline-block;
+        text-align: left;
+        line-height: 1.2em
+    }
+    
+    .progress-indicator.stacked>li a {
+        border: none
+    }
+    
+    .progress-indicator.stacked.nocenter>li .bubble {
+        margin-left: 0;
+        margin-right: 0
+    }
+    
+    .progress-indicator.stacked.nocenter>li .bubble:after,
+    .progress-indicator.stacked.nocenter>li .bubble:before {
+        left: 10px
+    }
+    
+    .progress-indicator.stacked.nocenter .stacked-text {
+        width: auto!important;
+        display: block;
+        margin-left: 40px!important
+    }
+    
+    @media handheld,
+    screen and (max-width:400px) {
+        .progress-indicator {
+            font-size: 60%
+        }
+    }
+</style>

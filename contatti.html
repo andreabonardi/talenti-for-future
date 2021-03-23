@@ -1,0 +1,705 @@
+<html class="theme-2">
+
+<head>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Ajax-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
+    <!--Google Captcha-->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="stile/bootstrap.min.css">
+
+    <!-- Boostrap JS-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="stile/mdb.min.css">
+
+    <!-- Cookies-->
+    <!--script src="js/Personalizzati/cookie.js"></script-->
+
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+    <!--Google Captcha-->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <!-- Stile personale -->
+    <link rel="stylesheet" href="stile/stile-2.css" type="text/css">
+
+    <!-- Ruota parole-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+    <script src="https://codepen.io/grayghostvisuals/pen/a08e0d79c150ff5030f9b6afaa137749.js"></script>
+
+    <!-- Animate style-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Recognize Mobile Devices-->
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+
+
+    <!-- Mobile-->
+    <!--Favicon Smarthone-->
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <!--Title for sharing-->
+    <meta name="apple-mobile-web-app-title" content="Talenti For Future">
+
+    <!--Title-->
+    <title>Contatti - T4F</title>
+
+
+</head>
+<!--script>
+    // function to set a given theme/color-scheme
+    function setTheme(themeName) {
+        localStorage.setItem('theme', themeName);
+        document.documentElement.className = themeName;
+    }
+
+    // function to toggle between light and dark theme
+    function toggleTheme() {
+        if (localStorage.getItem('theme') === 'theme-1') {
+            setTheme('theme-2');
+        } else {
+            setTheme('theme-1');
+        }
+    }
+
+    // Immediately invoked function to set the theme on initial load
+    (function() {
+        if (localStorage.getItem('theme') === 'theme-1') {
+            setTheme('theme-1');
+            document.getElementById('slider').checked = false;
+        } else {
+            setTheme('theme-2');
+            document.getElementById('slider').checked = true;
+        }
+    })();
+</script-->
+
+<body class="total-container">
+
+
+    <!-- Scroll to top-->
+    <div>
+        <a href="#" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+    </div>
+
+
+    <!-- End return to top-->
+
+    <!--PER HEADER IMPORTO DA QUI-->
+    <script>
+        //Gestione apertura menu mobile
+        $(window).resize(function() {
+            if ($(window).width() > 992) {
+                if ($(".dropdown-menu").hasClass("show")) {
+                    $(".dropdown-menu").removeClass("show");
+                }
+                if ($(".navbar-collapse").hasClass("show")) {
+                    //$(".navbar-collapse").removeClass("show");
+                    $(".ham.hamRotate.ham1").click();
+
+                }
+            }
+        });
+
+        //open close respnsive header
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+            //document.getElementById("header").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            //document.getElementById("header").style.marginLeft= "0";
+        };
+
+        //show/hide div orari header
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                if ($(window).width() > 992) {
+                    var sc = $(window).scrollTop()
+                    if (sc > 100) {
+                        $(".orari-header").slideUp();
+                        $("nav").addClass("header-position");
+                    } else {
+                        $(".orari-header").slideDown();
+                        $("nav").removeClass("header-position");
+                    }
+                }
+            });
+        });
+
+        $(window).resize(function() {
+            $(window).scroll(function() {
+                if ($(window).width() > 992) {
+                    var sc = $(window).scrollTop()
+                    if (sc > 100) {
+                        $(".orari-header").slideUp();
+                        $("nav").addClass("header-position");
+                    } else {
+                        $(".orari-header").slideDown();
+                        $("nav").removeClass("header-position");
+                    }
+                }
+            });
+        });
+
+        // ===== Scroll to Top ==== 
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 50) { // If page is scrolled more than 50px
+                $('#return-to-top').fadeIn(300); // Fade in the arrow
+            } else {
+                $('#return-to-top').fadeOut(300); // Else fade out the arrow
+            }
+        });
+    </script>
+    <!--Class active header-->
+    <style>
+        @media screen and (min-width: 992px) {
+            .theme-navigation-and-icons .marker {
+                position: absolute;
+                left: 60%;
+                bottom: 0px;
+                height: 4px;
+                width: 20%;
+                background-color: var(--textColor3);
+                -moz-transition: all 0.2s ease-in-out;
+                -o-transition: all 0.2s ease-in-out;
+                -webkit-transition: all 0.2s ease-in-out;
+                transition: all 0.2s ease-in-out;
+                z-index: -1;
+            }
+        }
+        
+        @media screen and (max-width: 992px) {
+            .navbar .dropdown-menu {
+                position: relative !important;
+                margin-top: 0;
+                border: none !important;
+                border-radius: 0px !important;
+                border-bottom-left-radius: 0px !important;
+                border-bottom-right-radius: 0px !important;
+                border-bottom: 1px solid var(--textColor3) !important;
+                margin-left: 0px !important;
+                margin-left: 1rem !important;
+            }
+        }
+    </style>
+
+
+    <!-- Header -->
+
+    <nav class="navbar navbar-expand-lg bg-white  navbar-light fixed-top">
+        <div class="row row-set  orari-header">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <i class="fas fa-map-marker-alt " style="padding-right: 10px "></i>Via Roma, 117, Milano (MI) - Italia
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                Lun - Ven 08:30-12:30 13:30-17:30
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <a href="tel:035 951711" class="no-link2"><i class="fas fa-phone-alt " style="padding-right: 10px"></i>035 951711</a>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <a href="https://www.youtube.com/channel/UCHCH03YyhiSIJcR_6sQnbAg?view_as=subscriber" target="_blank" title="YouTube" style="display: inline-block; margin-right: 0px;">
+                    <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="https://www.instagram.com" target="_blank" title="Instagram" style="display: inline-block;">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="https://ww.linkedin.com" target="_blank" title="LinkedIn" style="display: inline-block;">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a href="mailto:info@talenti4future.it" target="_blank" title="E-mail" style="display: inline-block;">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        <!-- Brand -->
+        <div class="logo2">
+            <a href="index.html" title="Talenti For Future" style="text-align: center;"> <img src="images/logo-black.png" alt="" class="logo-img"> </a>
+        </div>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    
+
+        <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+            <path
+                  class="line top"
+                  d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+            <path
+                  class="line middle"
+                  d="m 30,50 h 40" />
+            <path
+                  class="line bottom"
+                  d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+          </svg>
+          
+          
+
+    </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse theme-navigation-and-icons " id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link activated" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link activated" href="chi-siamo.html">Chi siamo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link activated" href="piano-di-studi.html">Piano di studi</a>
+                </li>
+                <!--li class="nav-item .dropdown">
+                <a class="nav-link dropdown-toggle activated" href="#" id="navbardrop" data-toggle="dropdown">
+                 Piano di studi
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Web Design</a>
+                    <a class="dropdown-item" href="#">Digital marketing</a>
+                    <a class="dropdown-item" href="#">Software Development</a>
+                </div>
+            </li-->
+                <li class="nav-item">
+                    <a class="nav-link activated" href="contatti.html">Contatti</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link activated" href="studia-con-noi.html">Studia con Noi</a>
+                </li>
+                </li>
+                <div class='marker'></div>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- End header-->
+
+    <!-- Fixed Menu Resposnive-->
+    <header>
+        <div class="head_container">
+            <div class="logo2">
+                <a href="index.html" title=""> <img src="images/logo-black.png" alt="" class="logo-mobile"> </a>
+            </div>
+            <!--label id="switch" class="switch">
+                        <input type="checkbox" onchange="toggleTheme()" id="slider">
+                        <span class="slider round"></span>
+                    </label-->
+            <div class="menu" id="myTopnav">
+                <ul>
+                    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="openNav()">&#9776;</a>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="chi-siamo.html">Chi siamo</a></li>
+                    <li><a href="piano-di-studi.html">Piano di Studi</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                    <li><a href="studia-con-noi.html">Studia con Noi</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="chi-siamo.html">Chi Siamo</a>
+        <a href="piano-di-studi.html">Piano di Studi</a>
+        <a href="contatti.html" class="activated">Contatti</a>
+        <a href="studia-con-noi.html">Studia Con Noi</a>
+
+
+        <a href="https://www.youtube.com" target="_blank" title="YouTube" style="display: inline-block; margin-right: 0px;">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+        <a href="https://www.instagram.com" target="_blank" title="Instagram" style="display: inline-block;">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://www.linkedin.com" target="_blank" title="LinkedIn" style="display: inline-block;">
+            <i class="fab fa-linkedin"></i>
+        </a>
+
+    </div>
+
+    <!-- End fixed menu responsive-->
+
+    <!--A QUI-->
+
+
+    <!-- All page container (corpo pagina)-->
+    <div id="" class="contact" style="margin-top: 100px;">
+
+        <!-- CORPRO PAGINA-->
+
+        <!--Mappa Google Map-->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2786.97276412692!2d9.80388521556507!3d45.6915185791043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47815b94b192b0c3%3A0xf17aceb2ec7636a4!2sFondazione%20ITS%20-%20JobsAcademy!5e0!3m2!1sit!2sit!4v1615295942702!5m2!1sit!2sit"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <!--END-->
+
+        <!--Card-->
+        <section class="listing-menu-section" style="margin-top: 7vh;">
+            <div class="container">
+                <h1 class="contact-title" style="font-weight: bold; font-size: 3rem; color: var(--textColor3); margin-bottom: 3%">CONTATTI</h1>
+                <h2 class="contact-intro"><span>Per qualsiasi necessit&agrave; non esitare a contattarci telefonicamente allo <span class="evidenza"><a href="tel:035951711" style="color: var(--textColor3);">035 951711</a></span> oppure compila il <span class="evidenza">form</span>                    sottostante!<br> Verrai ricontattato il prima possibile.</span>
+                </h2>
+                <div class="row">
+
+                    <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12 ">
+                        <div class="container">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="first">Nome</label>
+                                            <input type="text" class="form-control" placeholder="Nome" id="first" required>
+                                        </div>
+                                    </div>
+                                    <!--  col-md-6   -->
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="last">Cognome</label>
+                                            <input type="text" class="form-control" placeholder="Cognome" id="last" required>
+                                        </div>
+                                    </div>
+                                    <!--  col-md-6   -->
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="phone">Telefono</label>
+                                            <input type="tel" class="form-control" id="phone" placeholder="Telefono" required>
+                                        </div>
+
+
+                                    </div>
+                                    <!--  col-md-6   -->
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                        </div>
+
+                                    </div>
+                                    <!--  col-md-6   -->
+                                </div>
+                                <!--  row   -->
+
+
+                                <div class="row">
+                                    <div class="col-md-12">
+
+                                        <div class="form-group">
+                                            <label for="email">Oggetto</label>
+                                            <input type="text" class="form-control" id="email" placeholder="Oggetto" required>
+                                        </div>
+                                    </div>
+                                    <!--  col-md-6   -->
+
+                                </div>
+                                <!--  row   -->
+
+                                <div class="row">
+                                    <div class="col-md-12">
+
+                                        <div class="form-group">
+                                            <label for="email">Messaggio</label>
+                                            <textarea class="form-control mb-3" rows="3" placeholder="Messaggio" required></textarea>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <div class="g-recaptcha" data-sitekey="6LcZ7ocaAAAAANn8HfGZYMGjfyjQenpdXb01qdfh"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Sure!" id="newsletter" required>
+
+                                            <label for="newsletter">Accetto le condizioni della Privacy Policy.</label>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <button type="submit" class="btn  submit-contact">Contattaci</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class=" col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                        <div class="card-admin">
+                            <div class="card">
+                                <div class="card-img cont"><img src="images/img-books.jpg"></div>
+                                <div class="card-body">
+                                    <h3 class="title"> <img src="images/logo-black.png" alt="" class="logo-img-contact"> </h3>
+                                    <ul class="list-unstyled contact-page">
+                                        <li class=" social-1 " style="margin-bottom: 10px; ">
+                                            <span style="display: inline; "><a href="https://goo.gl/maps/aN2F5EzZQsGuwYeS8" target="_blank"><i class="fas fa-map-marker-alt " style="padding-right: 0.9rem !important;"></i>Via Roma, 117, Milano (MI) - Italia</span></li>
+                                        </li>
+                                        <li class="social-2 ">
+                                            <span style="display: inline; "><a href="tel:035 951711"><i class="fas fa-phone-alt "  style="padding-right: 0.5rem !important; "></i>035 951711</span></a>
+                                        </li>
+                                        <li class="footer-social-li social-3 ">
+                                            <span style="display: inline; "> <a href="mailto:info@talenti4future.it" title="E-mail "><i class="fa fa-envelope " style="padding-right: 0.5rem !important; "></i>info@talenti4future.it </span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!--END CARD-->
+
+
+        <!-- END CORPO PAGINA-->
+
+        <!-- FOOTER-->
+
+        <!-- Footer -->
+        <div class=" row row-set ">
+
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 link ">
+                <a href="chi-siamo.html">
+                    <i class="fas fa-users "></i> Chi siamo
+                </a>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 link ">
+                <a href="piano-di-studi.html">
+                    <i class="fas fa-graduation-cap "></i>Piano di studi
+                </a>
+            </div>
+
+
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 link ">
+                <a href="contatti.html">
+                    <i class="fas fa-envelope "></i>Contatti
+                </a>
+            </div>
+            </a>
+
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 link ">
+                <a href="studia-con-noi.html">
+                    <i class="fas fa-user-graduate "></i>Studia con noi
+                </a>
+            </div>
+
+
+        </div>
+
+        <!--FOOTER-->
+        <footer class="page-footer font-small indigo ">
+
+            <div class="container text-center text-md-left " style="width: 90% !important; margin-left: 5% !important; margin-right: 5% !important;">
+
+                <!-- Grid row -->
+                <div class="row ">
+
+                    <!--About me-->
+                    <div class="col-md-3 mx-auto prima-col-foot">
+                        <div class="footer-about-me-div">
+                            <img src="images/logo.png " alt=" ">
+                            <br>
+                        </div>
+
+                        <div>
+
+                            <ul class=" list-unstyled">
+                                <li style="display: inline; ">
+                                    <a href="www.facebook.com " title="Facebook " target="_blank "><i class="fab fa-facebook-square " style="display: inline; "></i> </a>
+                                </li>
+                                <li style="display: inline; ">
+                                    <a href="www.instagram.com " title="Instagram " target="_blank "> <i class="fab fa-instagram "></i></a>
+                                </li>
+                                <li style="display: inline; ">
+                                    <a href="www.linkedin.com " title="Linkedin " target="_blank "><i class="fab fa-linkedin "></i></a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none ">
+
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto ">
+
+                        <!-- Naviga nel sito -->
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer-title ">Site Map</h5>
+                        <ul class="list-unstyled sitemap">
+                            <li>
+                                <a href="index.html " title="Home ">Home</a>
+                            </li>
+                            <li>
+                                <a href="chi-siamo.html" title="About "> Chi Siamo</a>
+                            </li>
+                            <li>
+                                <a href="piano-di-studi.html" title="VideoGames ">Piano di studi</a>
+                            </li>
+                            <li>
+                                <a href="contacts.html " title="Contatti ">Contatti</a>
+                            </li>
+                            <li>
+                                <a href="studia-con-noi.html" title="Football ">Studia con noi</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none ">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto newsletter">
+
+                        <!-- Newsletter -->
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer-title ">Iscriviti alla Newsletter</h5>
+
+                        <ul class="list-unstyled ">
+
+                            <form class="input-group " action="mail.php " method="post ">
+                                <div class="row ">
+                                    <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 div-form ">
+                                        <input type="text " name="first_name " class="form-control form-control-sm input-footer " placeholder="Nome e Cognome " aria-label="Your email " aria-describedby="basic-addon2 " name="first_name " required>
+                                    </div>
+                                    <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 div-form ">
+                                        <input type="email " name="email " class="form-control form-control-sm input-footer " placeholder="Indirizzo e-mail " aria-label="Your email " aria-describedby="basic-addon2 " name="email " required>
+                                    </div>
+
+                                    <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 div-form ">
+                                        <div class="input-group-append ">
+                                            <input class="btn btn-sm btn-outline-white my-0 invia-footer " type="submit " name="submit " value="Invia ">
+                                        </div>
+                                    </div>
+                            </form>
+
+
+
+                        </ul>
+
+
+                        </div>
+                        <!-- Grid column -->
+
+                        <hr class="clearfix w-100 d-md-none ">
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 mx-auto " style="width: 100% !important; padding-right: 0% !important; ">
+
+                            <!-- Link utili -->
+                            <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer-title title-contact-footer ">Contatti</h5>
+
+                            <ul class="list-unstyled " style=" text-align:left !important; ">
+
+                                <li class=" social-1 " style="margin-bottom: 10px; ">
+                                    <span style="display: inline; "><a href="https://goo.gl/maps/aN2F5EzZQsGuwYeS8 " target="_blank "><i class="fas fa-map-marker-alt " style="padding-right: 0.9rem !important; "></i>Via Roma, 117, Milano (MI) - Italia</span></li>
+                                </li>
+                                <li class="social-2 ">
+                                    <span style="display: inline; "><a href="tel:035 951711 "><i class="fas fa-phone-alt "  style="padding-right: 0.5rem !important; "></i>035 951711</span></a>
+                                </li>
+                                <li class="footer-social-li social-3 ">
+                                    <span style="display: inline; "> <a href="mailto:info@talenti4future.it " title="E-mail "><i class="fa fa-envelope " style="padding-right: 0.5rem !important; "></i>info@talenti4future.it </span></a>
+                                </li>
+
+
+
+                            </ul>
+
+                        </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <!-- Grid row -->
+
+
+
+
+                </div>
+                <!-- Footer Links -->
+
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3 copyright ">&copy; Copyright 2021 - Talenti For Future
+                </div>
+                <!-- Copyright -->
+
+        </footer>
+        <!--END FOOTER -->
+
+        </div>
+
+        <!-- Carosello-->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js " integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k " crossorigin="anonymous "></script>
+        <script src="js/carousel/jquery.backstretch.min.js "></script>
+        <script src="js/carousel/wow.min.js "></script>
+        <script src="js/carousel/scripts.js "></script>
+
+        <script>
+            // interval is in milliseconds. 1000 = 1 second -> so 1000 * 10 = 10 seconds
+            $('.carousel').carousel({
+                interval: 3000,
+                pause: false
+            });
+
+            //animation with delay
+            setInterval(function() {
+                // toggle the class every five second
+                $('.title-page i').toggleClass('animate__bounce');
+                setTimeout(function() {
+                    // toggle back after 1 second
+                    $('.title-page i').toggleClass('animate__bounce');
+                }, 1000);
+            }, 3000);
+
+            //zoom image with title on scroll down 
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();
+                $(".title-page-container").css({
+                    width: (100 + scroll / 30) + "%"
+                })
+            })
+        </script>
+
+
+
+</body>
+
+</html>
