@@ -1330,6 +1330,9 @@
         .logo-q-img {
             width: 20% !important;
         }
+        .img-prenota {
+            display: none !important;
+        }
     }
     
     @media screen and (max-width: 500px) {
