@@ -485,7 +485,7 @@
                     <a class="button-ques go-back-hr" style="width: 50%; text-align: center;">Indietro</a>
                 </div>
                 <div style="text-align: center; margin-top: 1vh; width: 100%; text-align: center !important;">
-                    <button type="submit" class="button-ques btn-invia-q" style=" text-align: center;">&nbsp;&nbsp;INVIA&nbsp;&nbsp;</button>
+                    <button class="button-ques btn-invia-q" style=" text-align: center;">&nbsp;&nbsp;INVIA&nbsp;&nbsp;</button>
                 </div>
             </div>
 
@@ -542,6 +542,7 @@
             $(".btn-ecomm").click(function() {
                 $(".e-commerce").hide();
                 $(".hr").show();
+                $(window).scrollTop(0);
                 $(".progress-indicator li:nth-child(5)").addClass("completed");
                 var Ecomm1 = parseInt(document.getElementById("rangevalue26").value) +
                     parseInt(document.getElementById("rangevalue27").value) +
@@ -571,6 +572,8 @@
                     parseInt(document.getElementById("rangevalue45").value) +
                     parseInt(document.getElementById("rangevalue46").value);
                 console.log(Hr1);
+                $(".form-cont").hide();
+                $(".result").show();
                 $(window).scrollTop(0);
             });
 
@@ -603,6 +606,34 @@
         </script>
 
         <!-- END CORPO PAGINA-->
+
+    </div>
+
+    <!--Valutazione punteggio finale-->
+    <div class="container form-cont result" style="width: 65%; background-color: var(--colorbg); display: none;">
+        <div class="row" style="margin-bottom: 1vh; padding-top: 5vh; text-align: center;">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 logo-q-cont">
+                <img src="images/logo-black.png" alt="" style="width: 20%;" class="logo-q-img">
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12" style="font-size: 2rem; font-weight: bold; color: var(--textColor3);">
+                Questionario del talento<br> <br>
+                <div style="text-align: left; font-size: 1.5rem; color: black;">
+                    La sua risposta è stata inoltrata correttamente. <br><br>Per ogni corso, sono stati sommati i punteggi di tutte le domande a cui ha risposto. <br><br> Ecco i risultati del suo test:
+                    <ul class="list-unstyled">
+                        <li class="marketing-result">Digital Marketing: </li>
+                        <li>Social Media Manager: </li>
+                        <li>E-commerce Specialist</li>
+                        <li>HR:</li>
+                    </ul>
+                    In base ai risultati del questionario che ha compilato, il corso per il quael è più portato è .....<br><br> In ogni caso, ci teniamo ad effettuare un colloquio con lei, in qaunto la vogliamo conoscere di persona per capire ancor di
+                    più il suo potenziale.<br>
+
+                    <a href="prenota-colloquio.html" target="_blank" class="go-to-q">Prenota il tuo colloquio</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
 </body>
