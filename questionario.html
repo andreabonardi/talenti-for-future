@@ -241,7 +241,7 @@
             <div class="marketing" style="display: none; padding-bottom: 9%;">
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                        <p style="font-size: 1.5rem;"><span style="font-weight: bold;">Ben fatto!</span> Ora, passiamo alle domande sui corsi.<br> Rispondi ad ogni domanda trascinando l'indicatore sulla scala che va da 1 a 10.</p>
+                        <p style="font-size: 1.5rem;"><span style="font-weight: bold;">Ben fatto!</span> Ora, passiamo alle domande sui corsi.<br> Rispondi ad ogni domanda trascinando l'indicatore sulla scala che va da 1 a 10.<br> La risposta è necessaria per tutte le domande seguenti.</p>
                         <h1 style="font-weight: bold; ">Digital Marketing</h1>
 
                     </div>
@@ -493,6 +493,7 @@
 
         <script>
             //TASTI AVANTI ORA AGGIUNGI/RIMUOV CLASSE COMPLETED
+            var Marketing, Social, Ecomm1, Hr1;
             $(".btn-pers").click(function() {
                 $(".personali").hide();
                 $(".intro").hide();
@@ -504,7 +505,7 @@
                 $(".social-media").show();
                 $(".marketing").hide();
                 $(".progress-indicator li:nth-child(3)").addClass("completed");
-                var Marketing = parseInt(document.getElementById("rangevalue1").value) +
+                Marketing = parseInt(document.getElementById("rangevalue1").value) +
                     parseInt(document.getElementById("rangevalue2").value) +
                     parseInt(document.getElementById("rangevalue3").value) +
                     parseInt(document.getElementById("rangevalue4").value) +
@@ -523,7 +524,7 @@
                 $(".social-media").hide();
                 $(".e-commerce").show();
                 $(".progress-indicator li:nth-child(4)").addClass("completed");
-                var Social = parseInt(document.getElementById("rangevalue12").value) +
+                Social = parseInt(document.getElementById("rangevalue12").value) +
                     parseInt(document.getElementById("rangevalue13").value) +
                     parseInt(document.getElementById("rangevalue14").value) +
                     parseInt(document.getElementById("rangevalue15").value) +
@@ -546,7 +547,7 @@
                 $(".hr").show();
                 $(window).scrollTop(0);
                 $(".progress-indicator li:nth-child(5)").addClass("completed");
-                var Ecomm1 = parseInt(document.getElementById("rangevalue26").value) +
+                Ecomm1 = parseInt(document.getElementById("rangevalue26").value) +
                     parseInt(document.getElementById("rangevalue27").value) +
                     parseInt(document.getElementById("rangevalue28").value) +
                     parseInt(document.getElementById("rangevalue29").value) +
@@ -564,7 +565,7 @@
 
             $(".btn-invia-q").click(function() {
 
-                var Hr1 = parseInt(document.getElementById("rangevalue37").value) +
+                Hr1 = parseInt(document.getElementById("rangevalue37").value) +
                     parseInt(document.getElementById("rangevalue38").value) +
                     parseInt(document.getElementById("rangevalue39").value) +
                     parseInt(document.getElementById("rangevalue40").value) +
@@ -579,6 +580,17 @@
                 $(".result").show();
                 $(".hr-result").append(Hr1);
                 $(window).scrollTop(0);
+                if (Marketing > Social && Marketing > Ecomm1 && Marketing > Hr1) {
+                    $(".corso-top").append("Digital Marketing.");
+                } else if (Social > Marketing && Social > Ecomm1 && Social > Hr1) {
+                    $(".corso-top").append("Social Media Manager.");
+                } else if (Ecomm1 > Marketing && Ecomm1 > Social && Ecomm1 > Hr1) {
+                    $(".corso-top").append("E-Commerce Specialist.");
+                } else if (Hr1 > Marketing && Hr1 > Social && Hr1 > Ecomm1) {
+                    $(".corso-top").append("HR.");
+                } else {
+                    $(".corso-top").replaceWith("<div>In base ai risultati del questionario che ha compilato, è emerso che la sua candidatura è adatta a più corsi.</div>");
+                }
             });
 
             //TASTI INDIETRO 
@@ -614,7 +626,7 @@
     </div>
 
     <!--Valutazione punteggio finale-->
-    <div class="container form-cont result" style="width: 65%; background-color: var(--colorbg); display: none;">
+    <div class="container form-cont result" style="width: 65%; background-color: var(--colorbg); display: none; padding-bottom: 5%;">
         <div class="row" style="margin-bottom: 1vh; padding-top: 5vh; text-align: center;">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 logo-q-cont">
                 <img src="images/logo-black.png" alt="" style="width: 20%;" class="logo-q-img">
@@ -626,13 +638,20 @@
                     <ul class="list-unstyled">
                         <li class="marketing-result">Digital Marketing: </li>
                         <li class="social-media-result">Social Media Manager: </li>
-                        <li class="e-commerce-result">E-commerce Specialist</li>
-                        <li class="hr-result">HR:</li>
+                        <li class="e-commerce-result">E-Commerce Specialist: </li>
+                        <li class="hr-result">HR: </li>
                     </ul>
-                    In base ai risultati del questionario che ha compilato, il corso per il quael è più portato è .....<br><br> In ogni caso, ci teniamo ad effettuare un colloquio con lei, in qaunto la vogliamo conoscere di persona per capire ancor di
-                    più il suo potenziale.<br>
+                    <div class="corso-top">
+                        In base ai risultati del questionario che ha compilato, il corso per il qual' è più portato è
+                    </div>
+                    <div>
+                        In ogni caso, ci teniamo ad effettuare un colloquio con lei, in quanto la vogliamo conoscere di persona per capire ancor di più il suo potenziale.
+                    </div>
 
-                    <a href="prenota-colloquio.html" target="_blank" class="go-to-q">Prenota il tuo colloquio</a>
+                    <div style="text-align: center; margin-top: 5%;">
+                        <a href="prenota-colloquio.html" target="_blank" class="go-to-q">Prenota il tuo colloquio</a>
+                    </div>
+
                 </div>
             </div>
         </div>
