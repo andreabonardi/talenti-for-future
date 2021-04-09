@@ -516,6 +516,7 @@
                     parseInt(document.getElementById("rangevalue10").value) +
                     parseInt(document.getElementById("rangevalue11").value);
                 console.log(Marketing);
+                $(".marketing-result").append(Marketing);
                 $(window).scrollTop(0);
             });
             $(".btn-social").click(function() {
@@ -537,6 +538,7 @@
                     parseInt(document.getElementById("rangevalue24").value) +
                     parseInt(document.getElementById("rangevalue25").value);
                 console.log(Social);
+                $(".social-media-result").append(Social);
                 $(window).scrollTop(0);
             });
             $(".btn-ecomm").click(function() {
@@ -556,6 +558,7 @@
                     parseInt(document.getElementById("rangevalue35").value) +
                     parseInt(document.getElementById("rangevalue36").value);
                 console.log(Ecomm1);
+                $(".e-commerce-result").append(Ecomm1);
                 $(window).scrollTop(0);
             });
 
@@ -574,6 +577,7 @@
                 console.log(Hr1);
                 $(".form-cont").hide();
                 $(".result").show();
+                $(".hr-result").append(Hr1);
                 $(window).scrollTop(0);
             });
 
@@ -621,9 +625,9 @@
                     La sua risposta è stata inoltrata correttamente. <br><br>Per ogni corso, sono stati sommati i punteggi di tutte le domande a cui ha risposto. <br><br> Ecco i risultati del suo test:
                     <ul class="list-unstyled">
                         <li class="marketing-result">Digital Marketing: </li>
-                        <li>Social Media Manager: </li>
-                        <li>E-commerce Specialist</li>
-                        <li>HR:</li>
+                        <li class="social-media-result">Social Media Manager: </li>
+                        <li class="e-commerce-result">E-commerce Specialist</li>
+                        <li class="hr-result">HR:</li>
                     </ul>
                     In base ai risultati del questionario che ha compilato, il corso per il quael è più portato è .....<br><br> In ogni caso, ci teniamo ad effettuare un colloquio con lei, in qaunto la vogliamo conoscere di persona per capire ancor di
                     più il suo potenziale.<br>
