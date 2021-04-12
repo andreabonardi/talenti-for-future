@@ -2763,8 +2763,20 @@
     @media screen and (max-width: 400px) {
         .title-arrow {
             color: var(--textColor3);
-            margin-top: -35%;
+            margin-top: -38%;
             font-size: 2rem;
+            margin-left: -2%;
+        }
+    }
+    
+    @media screen and (max-width: 330px) {
+        .title-page-top {
+            font-size: 3rem !important;
+            top: 25% !important;
+        }
+        .title-long {
+            font-size: 2rem !important;
+            top: 27% !important;
         }
     }
     
