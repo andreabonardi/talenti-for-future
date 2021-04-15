@@ -1322,7 +1322,8 @@
             width: 90% !important;
         }
         .form-cont {
-            width: 95% !important;
+            width: 100% !important;
+            opacity: 0.9;
         }
         .logo-q-cont {
             text-align: center;
